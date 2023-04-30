@@ -11,24 +11,114 @@
             "answer": 1
         },
         {
-            "question": "What is the largest organ in the human body?",
+            "question": "Who was the 23rd president of the US ?",
             "options": [
-                "Brain",
-                "Heart",
-                "Liver",
-                "Skin"
+                "George Washington",
+                "Abraham Lincoln",
+                "Benjamin Harrison",
+                "Barak Obama"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How many months in a year have 28 days?",
+            "options": [
+                "4",
+                "1",
+                "1,but not every year, but once every 4 year",
+                "3"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How many men does it take to dig half a hole?",
+            "options": [
+                "10",
+                "2",
+                "1",
+                "0,you can't dig half a hole"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How many zeroes are there in 1 million?",
+            "options": [
+                "6",
+                "4",
+                "3",
+                "5"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which one among the following lays eggs and does not produce young ones directly?",
+            "options": [
+                "Whale",
+                "Porcupine",
+                "Echidna",
+                "Kangaroo"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "O multiplied by any number gives the result as ________?",
+            "options": [
+                "1",
+                "The Same Number",
+                "Undefined",
+                "0"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which of the following is the smallest bird?",
+            "options": [
+                "Hummingbird",
+                "Parrot",
+                "House sparrow",
+                "Pigeon"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What year was NASA founded?",
+            "options": [
+                "1948",
+                "1960",
+                "1958",
+                "2009"
             ],
             "answer": 3
         },
         {
-            "question": "What is the symbol for potassium?",
+            "question": "Who was the first man on moon?",
             "options": [
-                "P",
-                "K",
-                "Na",
-                "Fe"
+                "Lance Armstrong",
+                "My mom",
+                "Neil Armstrong",
+                "George Washington"
             ],
-            "answer": 1
+            "answer": 2
+        },
+        {
+            "question": "Which among the following produces honey?",
+            "options": [
+                "Flying ant",
+                "Hornet",
+                "Bee",
+                "Wasp"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which number should come next in the series? 1, 1, 2, 3, 5, 8, ___",
+            "options": [
+                "10",
+                "11",
+                "13",
+                "21"
+            ],
+            "answer": 3
         }
     ]
 }
