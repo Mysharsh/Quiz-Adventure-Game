@@ -24,7 +24,7 @@ public class Countdown : MonoBehaviour
 		{
 			timeStart = 0;
 			textBox.text = "0";
-			
+			GetComponent<QuizManager>().Submitbtn();
 			enabled = false;
 		}
 	}

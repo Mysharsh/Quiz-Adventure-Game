@@ -14,7 +14,7 @@ public class QuizManager : MonoBehaviour
     public Toggle option4Toggle;
     public GameObject nextButton;
     public GameObject SubmitButton;
-    public string jsonFilePath;
+    //public string jsonFilePath;
     public TextMeshProUGUI Scoretxt;
     public GameObject Dialoguebox;
     public GameObject Resultbox;
@@ -36,19 +36,16 @@ public class QuizManager : MonoBehaviour
 
         LoadQuestions();
         DisplayQuestion();
-        
 
-
-        
         //Debug.Log(pts);
        // quespts=pts.currentPts;
-        Debug.Log(GlobalManager.GetComponent<Global>().currentPts);
+       // Debug.Log(GlobalManager.GetComponent<Global>().currentPts);
         //nextButton.onClick.AddListener(NextQuestion);
     }
 
     void LoadQuestions()
     {
-        string jsonString = File.ReadAllText(Application.dataPath + "/" + jsonFilePath);
+        string jsonString = File.ReadAllText(Application.dataPath + "/StreamingAssets/quiz_data.json");
         Quiz quiz = JsonUtility.FromJson<Quiz>(jsonString);
         questions = quiz.questions;
     }
@@ -103,8 +100,6 @@ public class QuizManager : MonoBehaviour
         if (currentQuestionIndex < questions.Count)
         {
             DisplayQuestion();
-            
-
         }
         else
         {
