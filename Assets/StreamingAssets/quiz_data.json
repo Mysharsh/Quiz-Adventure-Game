@@ -1,0 +1,34 @@
+{
+    "questions": [
+        {
+            "question": "What is the capital of France?",
+            "options": [
+                "London",
+                "Paris",
+                "New York",
+                "Tokyo"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the largest organ in the human body?",
+            "options": [
+                "Brain",
+                "Heart",
+                "Liver",
+                "Skin"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the symbol for potassium?",
+            "options": [
+                "P",
+                "K",
+                "Na",
+                "Fe"
+            ],
+            "answer": 1
+        }
+    ]
+}

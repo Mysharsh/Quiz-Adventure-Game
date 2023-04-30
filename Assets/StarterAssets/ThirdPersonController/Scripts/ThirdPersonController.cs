@@ -1,4 +1,5 @@
 ﻿ using UnityEngine;
+using TMPro;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -14,6 +15,11 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        GameObject GlobalManager;
+        public TextMeshProUGUI CoinsText;
+        public TextMeshProUGUI AlphaText;
+        private int Coinsint;
+        private int Alphaint;
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -130,6 +136,10 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            // finds global object
+            GlobalManager = GameObject.FindGameObjectWithTag("Global");
+            CoinsText.text = "Coins: " + 0;
+            AlphaText.text = "Alphabets: " + 0;
         }
 
         private void Start()
@@ -371,11 +381,21 @@ namespace StarterAssets
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
 
-            // adds 1 to coin score, displays it and destroys the coin
-            if (hit.transform.tag == "Coin")
+            switch (hit.transform.tag)
             {
+                case "Coin":
                 FindObjectOfType<AudioManager>().Play("Coin");
+                GlobalManager.GetComponent<Global>().Coins += 15;
+                    Coinsint+=1;
+                    CoinsText.text = "Coins: "+Coinsint;
                 Destroy(hit.gameObject);
+                    break;
+                case "Alpha":
+                    GlobalManager.GetComponent<Global>().Alphabets += 2;
+                    Alphaint += 1;
+                    AlphaText.text = "Alphabets: " + Alphaint;
+                    Destroy(hit.gameObject);
+                    break;
             }
         }
 
