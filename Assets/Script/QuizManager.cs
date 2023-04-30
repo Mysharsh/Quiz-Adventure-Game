@@ -20,7 +20,11 @@ public class QuizManager : MonoBehaviour
     public GameObject Resultbox;
     [HideInInspector]
     public int quespts = 0;
+    [HideInInspector]
+    public int Totalpts = 0;
     //public Global pts;
+    GameObject GlobalManager;
+
 
 
     private int currentQuestionIndex = 0;
@@ -28,16 +32,17 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
+        GlobalManager = GameObject.FindGameObjectWithTag("Global");
+
         LoadQuestions();
         DisplayQuestion();
-        Scene sourcescene = SceneManager.GetSceneByName("Demo");
-        GameObject[] gameObject = sourcescene.GetRootGameObjects();
+        
 
 
-        Debug.Log(GetComponent<Global>());
+        
         //Debug.Log(pts);
        // quespts=pts.currentPts;
-        Debug.Log(quespts);
+        Debug.Log(GlobalManager.GetComponent<Global>().currentPts);
         //nextButton.onClick.AddListener(NextQuestion);
     }
 
@@ -114,7 +119,9 @@ public class QuizManager : MonoBehaviour
 
         Dialoguebox.SetActive(false);
         Resultbox.SetActive(true);
-        Scoretxt.SetText(quespts.ToString());
+        Totalpts = quespts + GlobalManager.GetComponent<Global>().currentPts;
+        Scoretxt.SetText(Totalpts.ToString());
+
     }
 
 }

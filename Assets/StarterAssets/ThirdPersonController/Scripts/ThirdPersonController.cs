@@ -385,13 +385,13 @@ namespace StarterAssets
             {
                 case "Coin":
                 FindObjectOfType<AudioManager>().Play("Coin");
-                GlobalManager.GetComponent<Global>().Coins += 15;
+                GlobalManager.GetComponent<Global>().currentPts += 15;
                     Coinsint+=1;
                     CoinsText.text = "Coins: "+Coinsint;
                 Destroy(hit.gameObject);
                     break;
                 case "Alpha":
-                    GlobalManager.GetComponent<Global>().Alphabets += 2;
+                    GlobalManager.GetComponent<Global>().currentPts += 2;
                     Alphaint += 1;
                     AlphaText.text = "Alphabets: " + Alphaint;
                     Destroy(hit.gameObject);
