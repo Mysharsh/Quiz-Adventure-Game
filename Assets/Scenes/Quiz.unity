@@ -1025,10 +1025,13 @@ MonoBehaviour:
   nextButton: {fileID: 1751132256}
   SubmitButton: {fileID: 509850974}
   Scoretxt: {fileID: 1293485156}
+  IQtxt: {fileID: 1245617218}
+  Agetxt: {fileID: 1288937896}
   Dialoguebox: {fileID: 1786203943}
   Resultbox: {fileID: 1799437246}
   quespts: 0
   Totalpts: 0
+  IQ: 0
 --- !u!1 &788569125
 GameObject:
   m_ObjectHideFlags: 0

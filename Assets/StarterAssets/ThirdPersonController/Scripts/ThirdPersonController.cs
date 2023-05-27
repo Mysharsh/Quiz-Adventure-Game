@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -145,7 +145,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -384,14 +384,14 @@ namespace StarterAssets
             switch (hit.transform.tag)
             {
                 case "Coin":
-                FindObjectOfType<AudioManager>().Play("Coin");
-                GlobalManager.GetComponent<Global>().currentPts += 15;
-                    Coinsint+=1;
-                    CoinsText.text = "Coins: "+Coinsint;
-                Destroy(hit.gameObject);
+                    FindObjectOfType<AudioManager>().Play("Coin");
+                    GlobalManager.GetComponent<Global>().currentPts += 1;
+                    Coinsint += 1;
+                    CoinsText.text = "Coins: " + Coinsint;
+                    Destroy(hit.gameObject);
                     break;
                 case "Alpha":
-                    GlobalManager.GetComponent<Global>().currentPts += 2;
+                    GlobalManager.GetComponent<Global>().currentPts += 5;
                     Alphaint += 1;
                     AlphaText.text = "Alphabets: " + Alphaint;
                     Destroy(hit.gameObject);
@@ -399,7 +399,7 @@ namespace StarterAssets
             }
         }
 
-            private void OnFootstep(AnimationEvent animationEvent)
+        private void OnFootstep(AnimationEvent animationEvent)
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {

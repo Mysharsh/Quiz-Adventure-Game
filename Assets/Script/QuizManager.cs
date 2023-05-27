@@ -16,12 +16,16 @@ public class QuizManager : MonoBehaviour
     public GameObject SubmitButton;
     //public string jsonFilePath;
     public TextMeshProUGUI Scoretxt;
+    public TextMeshProUGUI IQtxt;
+    public TextMeshProUGUI Agetxt;
     public GameObject Dialoguebox;
     public GameObject Resultbox;
     [HideInInspector]
     public int quespts = 0;
     [HideInInspector]
     public int Totalpts = 0;
+    [HideInInspector]
+    public float IQ = 0;
     //public Global pts;
     GameObject GlobalManager;
 
@@ -48,6 +52,7 @@ public class QuizManager : MonoBehaviour
         string jsonString = File.ReadAllText(Application.dataPath + "/StreamingAssets/quiz_data.json");
         Quiz quiz = JsonUtility.FromJson<Quiz>(jsonString);
         questions = quiz.questions;
+        Debug.Log(jsonString);
     }
 
     void DisplayQuestion()
@@ -66,24 +71,24 @@ public class QuizManager : MonoBehaviour
         if (option1Toggle.isOn && question.answer == 0)
         {
             Debug.Log("correct 1");// Show correct feedback
-            quespts += 10;
+            quespts += 5;
         }
         else if (option2Toggle.isOn && question.answer == 1)
         {
             Debug.Log("correct 2");
-            quespts += 10;
+            quespts += 5;
 
         }
         else if (option3Toggle.isOn && question.answer == 2)
         {
             Debug.Log("correct 3");
-            quespts += 10;
+            quespts += 5;
 
         }
         else if (option4Toggle.isOn && question.answer == 3)
         {
             Debug.Log("correct 4");
-            quespts += 10;
+            quespts += 5;
 
         }
         else
@@ -111,12 +116,14 @@ public class QuizManager : MonoBehaviour
     public void Submitbtn()
     {
         //CheckAnswer();
-
         Dialoguebox.SetActive(false);
         Resultbox.SetActive(true);
         Totalpts = quespts + GlobalManager.GetComponent<Global>().currentPts;
+        Debug.Log(Totalpts);
+        IQ = Mathf.RoundToInt(Totalpts / 48.14f)*100;
+        IQtxt.SetText(IQ.ToString());
         Scoretxt.SetText(Totalpts.ToString());
-
+        Agetxt.SetText(GlobalManager.GetComponent<Global>().Age.text.ToString());
     }
 
 }

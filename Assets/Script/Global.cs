@@ -8,11 +8,14 @@ public class Global : MonoBehaviour
     //public int Alphabets;
 	[HideInInspector]
 	public int currentPts ;
+	public TMP_InputField Age;
+	public TMP_InputField Name;
+   
 
 
 	void Awake()
     {
-        // keeps object alive to track coins and lives through death
+        // keeps object alive to track coins 
         DontDestroyOnLoad(gameObject);
     }
 }

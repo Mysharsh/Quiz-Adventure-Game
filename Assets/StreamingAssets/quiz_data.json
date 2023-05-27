@@ -99,26 +99,6 @@
                 "George Washington"
             ],
             "answer": 2
-        },
-        {
-            "question": "Which among the following produces honey?",
-            "options": [
-                "Flying ant",
-                "Hornet",
-                "Bee",
-                "Wasp"
-            ],
-            "answer": 2
-        },
-        {
-            "question": "Which number should come next in the series? 1, 1, 2, 3, 5, 8, ___",
-            "options": [
-                "10",
-                "11",
-                "13",
-                "21"
-            ],
-            "answer": 3
         }
     ]
 }
