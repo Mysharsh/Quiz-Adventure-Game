@@ -4,10 +4,10 @@ using TMPro;
 
 public class Global : MonoBehaviour
 {
-   // public int Coins;
+    // public int Coins;
     //public int Alphabets;
-	[HideInInspector]
-	public int currentPts ;
+    [HideInInspector]
+    public int currentPts; 
 	public TMP_InputField Age;
 	public TMP_InputField Name;
    
